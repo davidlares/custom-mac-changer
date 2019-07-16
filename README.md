@@ -35,7 +35,7 @@ You can also set `+x` priveleges like `sudo chmod +x mac.py` and run it like:
 
 ```
  ifconfig eth0 down
- ifconfig eth0 hw ether 00:11:22:33:44:55 (this will change the ether prop (MAC address) of the eth0 interface)
+ ifconfig eth0 hw ether 00:11:22:33:44:55
  ifconfig eth0 up
 
 ```
@@ -43,6 +43,9 @@ You can also set `+x` priveleges like `sudo chmod +x mac.py` and run it like:
 ### Raw script for 'ip a'
 
 ```
+ ip link set eth0 down
+ ip link set eth0 address 00:11:22:33:44:55
+ ip link set eth0 up
 
 ```
 
